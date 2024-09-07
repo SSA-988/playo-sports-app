@@ -16,16 +16,7 @@ app.use(bodyParser.json());
 
 const jwt = require('jsonwebtoken');
 
-mongoose
-  .connect(
-    'mongodb+srv://sujan:sujan@cluster0.ciriapw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
-  )
-  .then(() => {
-    console.log('Connected to Mongo Db');
-  })
-  .catch(err => {
-    console.log('Error connecting to MongoDb', err);
-  });
+
 
 app.listen(port, () => {
   console.log('Server running on port 8000');
